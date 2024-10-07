@@ -40,32 +40,31 @@ resource "azurerm_linux_web_app" "main" {
 }
 
 
-/*
-resource "azurerm_cosmosdb_account" "main" {
-  name                = "cosmos-account_mr"
-  location            = azurerm_resource_group.main.location
-  resource_group_name = azurerm_resource_group.main.name
-  offer_type          = "Standard"
 
-  consistency_policy {
-    consistency_level = "Session"
-  }
+# resource "azurerm_cosmosdb_account" "main" {
+#   name                = "cosmos-account_mr"
+#   location            = azurerm_resource_group.main.location
+#   resource_group_name = azurerm_resource_group.main.name
+#   offer_type          = "Standard"
 
-  geo_location {
-    location          = azurerm_resource_group.main.location
-    failover_priority = 0
-  }
-}
+#   consistency_policy {
+#     consistency_level = "Session"
+#   }
+
+#   geo_location {
+#     location          = azurerm_resource_group.main.location
+#     failover_priority = 0
+#   }
+# }
 
 resource "azurerm_app_service_source_control" "main" {
   app_id         =  azurerm_linux_web_app.main.id
-  repo_url       = "https://github.com/mathilde-rigaud/CloudComputing"
+  repo_url       = "https://github.com/mathilde-rigaud/CloudComputingTP1"
   branch         = "main"
 }
 
-resource "azurerm_cosmosdb_sql_database" "main" {
-  name                = "database_mr"
-  resource_group_name = azurerm_resource_group.main.name
-  account_name        = azurerm_cosmosdb_account.main.name
-}
-*/
+# resource "azurerm_cosmosdb_sql_database" "main" {
+#   name                = "databasemr"
+#   resource_group_name = azurerm_resource_group.main.name
+#   account_name        = azurerm_cosmosdb_account.main.name
+# }
