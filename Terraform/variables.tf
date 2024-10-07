@@ -1,5 +1,5 @@
 variable "resource_group_name" {
-  default = "webapp_rgmr"
+  default = "webapp_rgmrd"
 }
 
 variable "location" {
@@ -11,9 +11,9 @@ variable "location" {
 }*/
 
 variable "app_service_plan_name" {
-  default = "app_service_planmr"
+  default = "app_service_planmrd"
 }
 
 variable "app_service_name" {
-  default = "pythonapiservicemr"
+  default = "pythonapiservicemrd"
 }
